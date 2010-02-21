@@ -1,4 +1,5 @@
 (function do_imagegrid(){
+  // load jQuery here if necessary.
   if (!window.jQuery || jQuery().jquery.indexOf('1.4')<0)
     return getScript('http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js', arguments.callee);//do_imagegrid);
   jQuery.noConflict();
