@@ -1,6 +1,14 @@
 #!/usr/bin/env perl
+# Add the following 2 lines to your mercurial setup file (.hg/hgrc) 
+# after removeing the  '# ' prefix first):
+# [hooks]
+# precommit = ./makeBookMarklet.pl < imageGridBookmarklet.js > imagegridbookmarklet.min.js
+
+#
 #
 # http://daringfireball.net/2007/03/javascript_bookmarklet_builder
+
+
 
 use strict;
 use warnings;
