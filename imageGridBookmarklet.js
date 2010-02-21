@@ -1,3 +1,4 @@
+// This script loads jQuery if needed and then tries to load the main code from googlecode.
 (function(){
    var jq = 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js';
    if (!window.jQuery) getScript(jq, get_imagegrid);
