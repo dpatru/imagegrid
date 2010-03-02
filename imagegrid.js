@@ -65,7 +65,7 @@
       img.parentNode.replaceChild($div.get(0),img);
 
       // input to specify grid
-      $('<input style="display:block" size="10" value="25 25" title="spacing #rgb+width">').change(cb).appendTo($div).change();
+      $('<input style="display:block" size="10" value="25 25" title="\"40 #f003 #0f04\" shows a 40px grid with alternating 3px red lines and 4px green lines.">').change(cb).appendTo($div).change();
 
       // callback to determine how to draw the grid.
       function cb(){ // called when input changes
@@ -86,7 +86,7 @@
 	else ystyles = parseStyles(strs);
 
 	// draw
-	ctx.drawImage($img.get(0),0,0);
+	ctx.drawImage(img,0,0);
 	if (xstep > 0) draw_lines(ctx, w, h, xstep, xstyles, false);
 	if (ystep > 0) draw_lines(ctx, h, w, ystep, ystyles, true);
 	return false;
