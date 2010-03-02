@@ -86,6 +86,7 @@
 	else ystyles = parseStyles(strs);
 
 	// draw
+	canvas.height=h;
 	ctx.drawImage(img,0,0);
 	if (xstep > 0) draw_lines(ctx, w, h, xstep, xstyles, false);
 	if (ystep > 0) draw_lines(ctx, h, w, ystep, ystyles, true);
