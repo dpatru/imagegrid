@@ -32,6 +32,7 @@ function loadImageOnCanvas(img) {
     canvas.height = img.height;
     var ctx = canvas.getContext("2d");
     ctx.drawImage( img, 0, 0 );
+    // getColors(canvas, ctx);
 };
 
 // from http://stackoverflow.com/a/1421988/268040q
@@ -60,3 +61,23 @@ function drawGrid() {
     ctx.strokeStyle = document.getElementById("style").value;
     ctx.stroke();
 }
+
+function hexColor(val) {
+    return ('00'+val.toString(16)).substr(2);
+}
+
+function getColors(canvas, ctx) {
+    var colors = new Object;
+    var img = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+    alert("getColors "+img.length);
+    for (var i = 0; i < img.length; i+=4) {
+	var red = hexColor(img[i]);
+	var green = hexColor(img[i+1]);
+	var blue = hexColor(img[i+2]);
+	var alpha = hexColor(img[i+3]);
+	var color = red+green+blue+alpha;
+	colors[color] = colors[color]? colors[color]+1: 1;
+    }
+    for (var c in colors) { console.log(c+" "+colors[c]); }
+}
+
