@@ -1,3 +1,27 @@
-<form><label>image url <input id="url"></label></form>
-<script src="imagegrid.js"></script>
+<!DOCTYPE html>
+<html>
+<head></head>
+<body onload="loadImage(); return false;">
+  <form name="form1" onSubmit="loadImage(); return false;">
+    <label>image url
+      <input id="url" size="200" onChange="loadImage(); return false;" value="https://scontent-lga1-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/11008454_10204314644208007_7192334900900328458_n.jpg?oh=35559b082da521f553d101fdf783e475&oe=56189D75">
+    </label>
+  </form>
+  <canvas id="c" style="display:block"></canvas>
+  <form>
+    <label>grid spacing 
+      <input id="spacing" type="number" min="2"
+	     step="1" value="20" onChange="loadImage(); return false;">
+    </label>
+    <label>stroke width
+      <input id="width" type="text" value=".5" onChange="loadImage(); return false;">
+    </label>
+    <label>stroke style 
+      <input id="style" type="text" value="rgba(0,0,0,.5)" onChange="loadImage(); return false;">
+    </label>
+  </form>
+  
+  <script src="imagegrid.js"></script>
+</body>
+</html>
 
